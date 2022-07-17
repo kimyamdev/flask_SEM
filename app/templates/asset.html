@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <table>
+        <tr valign="top">
+            <td>
+                <h1>Asset: {{ asset.asset_name }}</h1>
+                <p>Thesis: {{ asset.asset_thesis }}</p>
+
+            </td>
+        </tr>
+    </table>
+    <hr>
+    {% for asset_update in asset.asset_updates %}
+        {{ asset_update.asset_update_title }}
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,5 @@
+form textarea#asset_thesis {
+    width: 320px;
+    height: 200px;
+    max-width: 400px;
+}

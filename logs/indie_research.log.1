@@ -1,0 +1,122 @@
+2022-07-17 18:58:59,473 INFO: Indie Research startup [in /Users/philhome/flask_sem/app/__init__.py:44]
+2022-07-17 19:02:18,296 INFO: Indie Research startup [in /Users/philhome/flask_sem/app/__init__.py:44]
+2022-07-17 21:28:56,547 INFO: Indie Research startup [in /Users/philhome/flask_sem/app/__init__.py:44]
+2022-07-17 21:29:05,389 INFO: Indie Research startup [in /Users/philhome/flask_sem/app/__init__.py:44]
+2022-07-17 21:29:15,743 INFO: Indie Research startup [in /Users/philhome/flask_sem/app/__init__.py:44]
+2022-07-17 21:29:20,934 ERROR: Exception on /index [GET] [in /Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py:1449]
+Traceback (most recent call last):
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask_login/utils.py", line 303, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/philhome/flask_sem/app/routes.py", line 16, in index
+    asset_updates = Asset_Update.query.all().order_by(Asset_Update.timestamp)
+AttributeError: 'list' object has no attribute 'order_by'
+2022-07-17 21:29:24,445 ERROR: Exception on /create_asset [GET] [in /Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py:1449]
+Traceback (most recent call last):
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/philhome/flask_sem/app/routes.py", line 109, in create_asset
+    return render_template('create_asset.html', title='Create Asset', form=form)
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/templating.py", line 154, in render_template
+    return _render(
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/philhome/flask_sem/app/templates/create_asset.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/philhome/flask_sem/app/templates/base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/philhome/flask_sem/app/templates/create_asset.html", line 8, in block 'content'
+    {{ form.asset_name.label }}<br>
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.CreateAssetForm object' has no attribute 'asset_name'
+2022-07-17 21:29:25,799 ERROR: Exception on /create_asset [GET] [in /Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py:1449]
+Traceback (most recent call last):
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/philhome/flask_sem/app/routes.py", line 109, in create_asset
+    return render_template('create_asset.html', title='Create Asset', form=form)
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/templating.py", line 154, in render_template
+    return _render(
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/philhome/flask_sem/app/templates/create_asset.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/philhome/flask_sem/app/templates/base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/philhome/flask_sem/app/templates/create_asset.html", line 8, in block 'content'
+    {{ form.asset_name.label }}<br>
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.CreateAssetForm object' has no attribute 'asset_name'
+2022-07-17 21:29:37,787 ERROR: Exception on /index [GET] [in /Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py:1449]
+Traceback (most recent call last):
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask_login/utils.py", line 303, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/philhome/flask_sem/app/routes.py", line 16, in index
+    asset_updates = Asset_Update.query.all().order_by(Asset_Update.timestamp)
+AttributeError: 'list' object has no attribute 'order_by'
+2022-07-17 21:29:39,600 ERROR: Exception on /create_asset [GET] [in /Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py:1449]
+Traceback (most recent call last):
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/philhome/flask_sem/app/routes.py", line 109, in create_asset
+    return render_template('create_asset.html', title='Create Asset', form=form)
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/templating.py", line 154, in render_template
+    return _render(
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/philhome/flask_sem/app/templates/create_asset.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/philhome/flask_sem/app/templates/base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/philhome/flask_sem/app/templates/create_asset.html", line 8, in block 'content'
+    {{ form.asset_name.label }}<br>
+  File "/Users/philhome/flask_sem/venv/lib/python3.8/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.CreateAssetForm object' has no attribute 'asset_name'

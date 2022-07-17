@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hi {{ current_user.username }},</h1>
+
+    <h3>These are the assets we are actively researching / investing in. 
+        <br> Please click on them to read our thesis and our updates:</h3>
+
+    {% for asset in assets %}
+
+        <a href="{{ url_for('asset', asset_name=asset.asset_name) }}">{{ asset.asset_name }}</a> <br>
+
+
+    {% endfor %}
+
+    <hr>
+
+    <h3>Latest updates:</h3>
+    
+    {% for asset_update in asset_updates %}
+
+    <div>
+        <p><a href="">{{ asset_update.asset_update_title }}</a></b></p>
+    </div>
+
+    {% endfor %}
+{% endblock %}

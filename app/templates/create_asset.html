@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Create an asset</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.asset_name.label }}<br>
+            {{ form.asset_name(size=32) }}<br>
+            {% for error in form.asset_name.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.asset_thesis.label }}<br>
+            {{ form.asset_thesis(size=64) }}<br>
+            {% for error in form.asset_thesis.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.asset_type.label }}<br>
+            {{ form.asset_type(size=32) }}<br>
+            {% for error in form.asset_type.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.asset_class.label }}<br>
+            {{ form.asset_class(size=32) }}<br>
+            {% for error in form.asset_class.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}
